@@ -79,6 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log(num);
           mensaje();
          
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
         }
       } else {
         setTimeout(() => {
@@ -93,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function mensaje() {
       let ganador = document.querySelector("h2");
-      ganador.innerText = "¡Has ganado. Reinicia para seguir jugando!";
+      ganador.innerText = "¡Has ganado! 🎉";
       clearInterval( timerInterval)
     }
 
