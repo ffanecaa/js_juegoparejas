@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica CR | Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+  </head>
+  <body>
+    <header>
+      <h1>Jack</h1>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./about.html">Sobre mí</a></li>
+          <li><a href="./contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Contacto</h2>
+      <address>
+        <p>email: jack.torrance@mail.com</p>
+        <p>teléfono:+34 666 123 123</p>
+      </address>
+
+      <form>
+        <fieldset>
+          <legend>Datos de Contacto</legend>
+          <ul>
+            <li>
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" />
+            </li>
+            <li>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" autocomplete="off" />
+            </li>
+            <li>
+              <label for="comments">Comentario:</label>
+              <textarea
+                cols="21"
+                rows="4"
+                name="comments"
+                minlength="3"
+                maxlength="50"
+                id="comments"
+                placeholder="Escribe lo que quieras aquí (Caracteres min. 3 máx. 50)"
+              ></textarea>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otros datos de interés</legend>
+          <ul>
+            <li>
+              <label for="mobile">Teléfono:</label>
+              <input type="tel" id="mobile" name="mobile" />
+            </li>
+            <li>
+              <label for="favNumber">Numero favorito:</label>
+              <input
+                type="number"
+                id="favNumber"
+                name="favNumber"
+                min="1"
+                max="20"
+              />
+            </li>
+            <li>
+              <label for="color">Color favorito:</label>
+              <input type="color" id="color" name="color" />
+            </li>
+            <li>
+              <label for="birthdate">Fecha nacimiento:</label>
+              <input type="date" id="birthdate" name="birthdate" />
+            </li>
+            <li>
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" />
+            </li>
+            <li class="one-line">
+              <label for="conditions">
+                Aceptas todos los terminos y condiciones sin leerlos?
+              </label>
+              <input
+                type="checkbox"
+                id="conditions"
+                name="termsConditions"
+                value="Acepto"
+                checked
+              />
+            </li>
+            <li class="one-line">
+              <p>¿Quieres ser mi amig@?</p>
+              <label for="amigoSi"> Sí </label>
+              <input
+                type="radio"
+                name="newfriend"
+                id="amigoSi"
+                value="si"
+                checked
+              />
+              <label for="amigoNo"> No </label>
+              <input type="radio" name="newfriend" id="amigoNo" value="no" />
+            </li>
+            <li class="one-line">
+              <label for="favFood">Comida favorita: </label>
+              <select id="favFood" name="favFood">
+                <option value="pizza">🍕 Pizza</option>
+                <option value="brócoli" selected>🥦 Brócoli</option>
+                <option value="paella">🥘 Paella</option>
+                <option value="hamburguesa">🍔 Hamburguesa</option>
+                <option value="tacos">🌮 Tacos</option>
+                <option value="china">🥠 Comida china</option>
+              </select>
+            </li>
+          </ul>
+        </fieldset>
+        <ul class="buttom">
+         <li > <button type="reset">Limpiar</button></li>
+       <li > <button type="submit">Enviar</button></li>
+
+    </ul>
+      </form>
+    </main>
+    <footer>
+      <p>© Jack Torrance - 2023</p>
+    </footer>
+  </body>
+</html>

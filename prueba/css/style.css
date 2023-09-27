@@ -1,0 +1,13 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#customid{
+    background-color: slategray;
+    height: 300px;
+
+}
+
+.customclass{
+    background-color: aqua;
+    height: 300px;
+}
