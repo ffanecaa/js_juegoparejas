@@ -1,0 +1,24 @@
+#gameBoard{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Cambiado de auto-fit a un valor fijo de 5 */
+  
+  gap:20px
+}
+
+.card{
+    border-radius: 8px;
+   
+    width:100px;
+  text-align: center;
+    height: 150px;
+  background-color: rgba(255, 166, 0, 0.471);
+    box-shadow: 0px 0px 30px #000;
+    font-size: 80px;
+    text-shadow: 0 0 30px orange;
+}
+
+.container{
+  width: 40vw;
+  height: 40vh;
+  margin:0 auto;
+}
