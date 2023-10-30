@@ -23,7 +23,8 @@ function createBoard() {
     cards = couple(cards);
     const gameBoard = document.getElementById('gameBoard');
     for (let i = 0; i < cards.length; i++) {
-        const card = document.createElement('div');  
+        const card = document.createElement('div'); 
+        card.innerText='❓' 
         card.classList.add('card');
         card.dataset.index = i;
         card.dataset.emoji = cards[i];
@@ -40,18 +41,25 @@ function volteo() {
 
     if (cardDescubierta.length < 2) {
         this.classList.add('boca_arriba')
-        this.style.backgroundColor = "white"; 
+        this.style.backgroundColor = "red"; 
+        // this.style.transform = "perspective(500px)translate(10px,0,20px)"; 
+        // this.style.transform = "rotateY(180deg)";
+
+        // Espera un momento antes de mostrar el contenido
+        setTimeout(() => {
+           
+     
         this.innerText = this.dataset.emoji;
         cardDescubierta.push(this);
-        
+    }, 100);
     }
 
     if (cardDescubierta.length === 2) {
         locked = true;
-        setTimeout(checkForMatch, 1000); 
+        setTimeout(checkForMatch, 200); 
     }
-}
 
+}
 function checkForMatch() {
     if (cardDescubierta[0].dataset.emoji === cardDescubierta[1].dataset.emoji) {
         cardDescubierta[0].style.backgroundColor = "red"; 
@@ -83,7 +91,7 @@ function checkForMatch() {
 
 createBoard();
 
-setInterval
+
 function resetGame() {
     attempts = 0;
     win = 0;

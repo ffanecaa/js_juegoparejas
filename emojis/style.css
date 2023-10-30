@@ -19,9 +19,9 @@ h1{
   font-size: 5rem;
   /* text-shadow: 0 0 30px orange; */
   transform-style: preserve-3d; /* Añadido para preservar las transformaciones 3D */
-  transition: transform 0.5s, color 0.5s;
-  transition: transform 0.5s, color 0.5s;
-  transform-style: preserve-3d;
+  /* transition: transform 0.5s, color 0.5s;
+  transition: transform 0.5s, color 0.5s; */
+
   transform: rotateY(0deg);
 display: flex;
 justify-content: center;
@@ -32,22 +32,23 @@ cursor:pointer;
 }
 
 .boca_arriba {
-  transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg); /* Transformaciones en x, y, y z */
+   transform: rotateX(0deg) rotateY(0deg)  translateZ(100px);
+   perspective:1000 ;
   cursor: pointer;
-  transition: transform 1.5s;
-  animation: voltear 1.5s;
+  transition: transform 0.5s;
+  animation: voltear 0.5s;
 }
 
 
 @keyframes voltear {
   0% {
-    transform: rotateY(0deg); /* Empieza con rotación 0 grados */
+    transform: rotateY(0deg); 
   }
   50% {
-    transform: rotateY(180deg); /* Llega a 180 grados a la mitad de la animación */
+    transform: rotateY(180deg); 
   }
   100% {
-    transform: rotateY(0deg); /* Vuelve a 0 grados al final de la animación */
+    transform: rotateY(180deg); /* Vuelve a 0 grados al final de la animación */
   }
 }
 
